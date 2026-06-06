@@ -19,12 +19,16 @@ export default function Navbar() {
 
     return (
         <div className="relative">
-            <nav className="bg-black text-white h-20 flex items-center justify-between px-16">
 
-                {/* Logo — ferme le megamenu au hover */}
+            {/* Toute la nav ferme le megamenu sauf SNEAKERS */}
+            <nav
+                className="bg-black text-white h-20 flex items-center justify-between px-16"
+                onMouseEnter={() => setMegaMenuOpen(false)}
+            >
+
+                {/* Logo */}
                 <Link
                     href="/"
-                    onMouseEnter={() => setMegaMenuOpen(false)}
                     className="flex items-center gap-2 text-white font-bold text-lg tracking-widest"
                 >
                     <span>WE</span>
@@ -38,11 +42,9 @@ export default function Navbar() {
                     />
                     <span>HAVE IT</span>
                 </Link>
+
                 {/* Liens */}
-                <div
-                    className="flex space-x-8"
-                    onMouseEnter={() => setMegaMenuOpen(false)}
-                >
+                <div className="flex space-x-8">
                     {navlinks.map((link) => (
                         <Link
                             key={link.href}
@@ -64,11 +66,8 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Icônes droite — ferme le megamenu au hover */}
-                <div
-                    className="flex items-center space-x-6"
-                    onMouseEnter={() => setMegaMenuOpen(false)}
-                >
+                {/* Icônes droite */}
+                <div className="flex items-center space-x-6">
                     <DropdownMenu>
                         <DropdownMenuTrigger className="flex items-center gap-1 text-white text-sm cursor-pointer">
                             <Globe className="w-4 h-4" />
@@ -86,8 +85,9 @@ export default function Navbar() {
 
             </nav>
 
-            {/* MegaMenu */}
+            {/* MegaMenu — ferme quand on quitte */}
             <div
+                onMouseEnter={(e) => e.stopPropagation()}
                 onMouseLeave={() => setMegaMenuOpen(false)}
                 className={`transition-all duration-200 ease-in-out overflow-hidden ${megaMenuOpen ? "opacity-100 max-h-96" : "opacity-0 max-h-0 pointer-events-none"
                     }`}
