@@ -4,36 +4,34 @@ import Image from "next/image"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Globe, Search, User, ShoppingBag } from "lucide-react"
 import { useState } from "react"
-import MegaMenu from "./MegaMenu"
+import SneakersMenu from "./menus/Sneakears"
+import ClothesMenu from "./menus/Clothes"
+import LivraisonMenu from "./menus/Livraison"
+import NouveautesMenu from "./menus/Nouveautes"
 
 const navlinks = [
     { label: "SNEAKERS", href: "/collections/sneakers" },
-    { label: "STREETWEAR", href: "/collections/streetwear" },
-    { label: "COLLECTIBLES", href: "/collections/collectibles" },
-    { label: "LIVRAISON 48H", href: "/livraison" },
-    { label: "NOUVEAUTÉS", href: "/nouveautes" },
+    { label: "CLOTHES", href: "/collections/clothes" },
+    { label: "LIVRAISON", href: "collections/livraison" },
+    { label: "NOUVEAUTÉS", href: "collections/nouveautes" },
 ]
 
 export default function Navbar() {
-    const [megaMenuOpen, setMegaMenuOpen] = useState(false)
+    const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
     return (
         <div className="relative">
 
-            {/* Toute la nav ferme le megamenu sauf SNEAKERS */}
             <nav
                 className="bg-black text-white h-20 flex items-center justify-between px-16"
-                onMouseEnter={() => setMegaMenuOpen(false)}
+                onMouseEnter={() => setActiveMenu(null)}
             >
 
                 {/* Logo */}
-                <Link
-                    href="/"
-                    className="flex items-center gap-2 text-white font-bold text-lg tracking-widest"
-                >
+                <Link href="/" className="flex items-center gap-2 text-white font-bold text-lg tracking-widest">
                     <span>WE</span>
                     <Image
-                        src="/novalogo.svg"
+                        src="images/novalogo.svg"
                         alt="Nova"
                         width={0}
                         height={0}
@@ -51,23 +49,22 @@ export default function Navbar() {
                             href={link.href}
                             onMouseEnter={(e) => {
                                 e.stopPropagation()
-                                link.label === "SNEAKERS"
-                                    ? setMegaMenuOpen(true)
-                                    : setMegaMenuOpen(false)
+                                setActiveMenu(link.label)
                             }}
                             className="text-sm font-medium transition-all duration-200 pb-1 relative"
                         >
                             {link.label}
-                            {link.label === "SNEAKERS" && (
-                                <span className={`absolute bottom-0 left-0 h-[2px] bg-white transition-all duration-300 ${megaMenuOpen ? "w-full" : "w-0"
-                                    }`} />
-                            )}
+                            <span className={`absolute bottom-0 left-0 h-[2px] bg-white transition-all duration-300 ${activeMenu === link.label ? "w-full" : "w-0"
+                                }`} />
                         </Link>
                     ))}
                 </div>
 
                 {/* Icônes droite */}
-                <div className="flex items-center space-x-6">
+                <div
+                    className="flex items-center space-x-6"
+                    onMouseEnter={() => setActiveMenu(null)}
+                >
                     <DropdownMenu>
                         <DropdownMenuTrigger className="flex items-center gap-1 text-white text-sm cursor-pointer">
                             <Globe className="w-4 h-4" />
@@ -85,14 +82,18 @@ export default function Navbar() {
 
             </nav>
 
-            {/* MegaMenu — ferme quand on quitte */}
+            {/* Menus */}
             <div
-                onMouseEnter={(e) => e.stopPropagation()}
-                onMouseLeave={() => setMegaMenuOpen(false)}
-                className={`transition-all duration-200 ease-in-out overflow-hidden ${megaMenuOpen ? "opacity-100 max-h-96" : "opacity-0 max-h-0 pointer-events-none"
+                onMouseLeave={() => setActiveMenu(null)}
+                className={`transition-all duration-200 ease-in-out overflow-hidden ${activeMenu && ["SNEAKERS", "CLOTHES", "LIVRAISON","NOUVEAUTÉS"].includes(activeMenu)
+                        ? "opacity-100 max-h-96"
+                        : "opacity-0 max-h-0 pointer-events-none"
                     }`}
             >
-                <MegaMenu />
+                {activeMenu === "SNEAKERS" && <SneakersMenu />}
+                {activeMenu === "CLOTHES" && <ClothesMenu />}
+                {activeMenu === "LIVRAISON" && <LivraisonMenu />}
+                {activeMenu === "NOUVEAUTÉS" && <NouveautesMenu />}
             </div>
 
         </div>
