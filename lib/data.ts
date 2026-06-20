@@ -1,6 +1,6 @@
 import { Product } from "@/types"
 
-export const frenchMonthProducts: Product[] = [
+export const sneakersProducts: Product[] = [
   {
     id: "1",
     brand: "NEW BALANCE",
@@ -9,7 +9,7 @@ export const frenchMonthProducts: Product[] = [
     originalPrice: 240,
     discount: 50,
     image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&q=80",
-    is48h: true,
+    is24h: true,
     slug: "new-balance-204l-mushroom"
   },
   {
@@ -20,7 +20,7 @@ export const frenchMonthProducts: Product[] = [
     originalPrice: 288,
     discount: 50,
     image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80",
-    is48h: true,
+    is24h: true,
     slug: "asics-gel-kayano-14"
   },
   {
@@ -31,7 +31,7 @@ export const frenchMonthProducts: Product[] = [
     originalPrice: 385,
     discount: 10,
     image: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=400&q=80",
-    is48h: true,
+    is24h: true,
     slug: "adidas-samba-og"
   },
   {
@@ -42,7 +42,7 @@ export const frenchMonthProducts: Product[] = [
     originalPrice: 190,
     discount: 10,
     image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&q=80",
-    is48h: true,
+    is24h: true,
     slug: "air-jordan-4-retro-bred"
   },
   {
@@ -53,12 +53,12 @@ export const frenchMonthProducts: Product[] = [
     originalPrice: 130,
     discount: 15,
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
-    is48h: false,
+    is24h: false,
     slug: "nike-air-force-1-white"
   },
 ]
 
-export const sneakersProducts: Product[] = [
+export const topnovaProducts: Product[] = [
   {
     id: "6",
     brand: "AIR JORDAN",
@@ -67,7 +67,7 @@ export const sneakersProducts: Product[] = [
     originalPrice: 370,
     discount: 10,
     image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&q=80",
-    is48h: false,
+    is24h: false,
     slug: "air-jordan-4-black-cat"
   },
   {
@@ -78,7 +78,7 @@ export const sneakersProducts: Product[] = [
     originalPrice: 150,
     discount: 10,
     image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&q=80",
-    is48h: true,
+    is24h: true,
     slug: "ugg-lowmel-chestnut"
   },
   {
@@ -89,7 +89,7 @@ export const sneakersProducts: Product[] = [
     originalPrice: 169,
     discount: 15,
     image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80",
-    is48h: true,
+    is24h: true,
     slug: "asics-gel-nyc-cream"
   },
   {
@@ -100,7 +100,7 @@ export const sneakersProducts: Product[] = [
     originalPrice: 180,
     discount: 10,
     image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&q=80",
-    is48h: true,
+    is24h: true,
     slug: "new-balance-9060-grey"
   },
   {
@@ -111,7 +111,7 @@ export const sneakersProducts: Product[] = [
     originalPrice: 140,
     discount: 10,
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
-    is48h: false,
+    is24h: false,
     slug: "nike-dunk-low-panda"
   },
 ]

@@ -1,63 +1,62 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Timer, Tag } from "lucide-react"
+"use client"
+import { useRef } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import ProductCard from "./ProductCard"
 import { Product } from "@/types"
 
-type ProductCardProps = {
-    product: Product
+type Props = {
+    title: string
+    products: Product[]
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCarousel({ title, products }: Props) {
+    const scrollRef = useRef<HTMLDivElement>(null)
+
+    const scroll = (direction: "left" | "right") => {
+        if (!scrollRef.current) return
+        const scrollAmount = 300
+        scrollRef.current.scrollBy({
+            left: direction === "left" ? -scrollAmount : scrollAmount,
+            behavior: "smooth",
+        })
+    }
+
     return (
-        <Link href={`/products/${product.slug}`} className="group block">
+        <section className="py-12 px-8 relative max-w-7xl mx-auto">
 
-            {/* Image */}
-            <div className="relative w-full aspect-square bg-[#f5f5f5] rounded-lg overflow-hidden">
+            {/* Titre */}
+            <h2 className="text-2xl font-bold text-center tracking-widest uppercase mb-8">
+                {title}
+            </h2>
 
-                {/* Badge réduction — haut gauche */}
-                {product.discount > 0 && (
-                    <span className="absolute top-3 left-3 z-10 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
-                        <Tag className="w-3 h-3" />
-                        -{product.discount}%
-                    </span>
-                )}
+            {/* Flèche gauche */}
+            <button
+                onClick={() => scroll("left")}
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors"
+            >
+                <ChevronLeft className="w-5 h-5" />
+            </button>
 
-                {/* Badge 48H — haut droite */}
-                {product.is48h && (
-                    <span className="absolute top-3 right-3 z-10 text-blue-600 text-xs font-bold flex items-center gap-1">
-                        <Timer className="w-3.5 h-3.5" />
-                        48H
-                    </span>
-                )}
-
-                <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
-                />
+            {/* Carousel scrollable */}
+            <div
+                ref={scrollRef}
+                className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+            >
+                {products.map((product) => (
+                    <div key={product.id} className="min-w-[250px]">
+                        <ProductCard product={product} />
+                    </div>
+                ))}
             </div>
 
-            {/* Infos */}
-            <div className="mt-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wide font-medium">
-                    {product.brand}
-                </p>
-                <p className="text-sm text-gray-900 mt-0.5 leading-snug">
-                    {product.name}
-                </p>
-                <div className="flex items-center gap-2 mt-1.5">
-                    <span className="text-sm text-gray-900">
-                        à partir de <span className="font-semibold">{product.price.toFixed(2)} €</span>
-                    </span>
-                    {product.discount > 0 && (
-                        <span className="text-xs line-through text-gray-400">
-                            {product.originalPrice.toFixed(2)} €
-                        </span>
-                    )}
-                </div>
-            </div>
+            {/* Flèche droite */}
+            <button
+                onClick={() => scroll("right")}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors"
+            >
+                <ChevronRight className="w-5 h-5" />
+            </button>
 
-        </Link>
+        </section>
     )
 }

@@ -6,6 +6,6 @@ export type Product = {
     originalPrice: number  // ex: 370 (prix barré)
     discount: number    // ex: 10 (pour -10%)
     image: string       // URL de l'image
-    is48h: boolean      // livraison 48h ou pas
+    is24h: boolean      // livraison 24h ou pas
     slug: string        // ex: "air-jordan-4" pour l'URL
 }
