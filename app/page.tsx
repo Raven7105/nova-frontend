@@ -11,8 +11,15 @@ export default function Home() {
       <div className="sticky top-0 z-30 -mt-10">
         <PromoBar />
       </div>
-      <ProductCarousel title="SNEAKERS" products={sneakersProducts} />
-      <ProductCarousel title="TOP NOVA" products={topnovaProducts} />
+      <ProductCarousel
+        title="SNEAKERS"
+        products={sneakersProducts}
+        href="/collections/sneakers"
+      />
+      <ProductCarousel
+        title="TOP NOVA"
+        products={topnovaProducts}
+      />
     </main>
   )
 }

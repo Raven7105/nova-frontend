@@ -1,5 +1,6 @@
 "use client"
 import { useRef } from "react"
+import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import ProductCard from "./ProductCard"
 import { Product } from "@/types"
@@ -7,9 +8,10 @@ import { Product } from "@/types"
 type Props = {
     title: string
     products: Product[]
+    href?: string
 }
 
-export default function ProductCarousel({ title, products }: Props) {
+export default function ProductCarousel({ title, products, href }: Props) {
     const scrollRef = useRef<HTMLDivElement>(null)
 
     const scroll = (direction: "left" | "right") => {
@@ -24,12 +26,18 @@ export default function ProductCarousel({ title, products }: Props) {
     return (
         <section className="py-12 px-8 relative max-w-7xl mx-auto">
 
-            {/* Titre */}
-            <h2 className="text-2xl font-bold text-center tracking-widest uppercase mb-8">
-                {title}
-            </h2>
+            {href ? (
+                <Link href={href}>
+                    <h2 className="text-2xl font-bold text-center tracking-widest uppercase mb-8 cursor-pointer ">
+                        {title}
+                    </h2>
+                </Link>
+            ) : (
+                <h2 className="text-2xl font-bold text-center tracking-widest uppercase mb-8">
+                    {title}
+                </h2>
+            )}
 
-            {/* Flèche gauche */}
             <button
                 onClick={() => scroll("left")}
                 className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors"
@@ -37,7 +45,6 @@ export default function ProductCarousel({ title, products }: Props) {
                 <ChevronLeft className="w-5 h-5" />
             </button>
 
-            {/* Carousel scrollable */}
             <div
                 ref={scrollRef}
                 className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
@@ -49,7 +56,6 @@ export default function ProductCarousel({ title, products }: Props) {
                 ))}
             </div>
 
-            {/* Flèche droite */}
             <button
                 onClick={() => scroll("right")}
                 className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors"

@@ -31,7 +31,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <AnnouncementBar />
-        <Navbar />
+        <div className="sticky top-0 z-50">
+          <Navbar />
+        </div>
+        
         {children}
       </body>
     </html>
