@@ -31,7 +31,7 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center gap-2 text-white font-bold text-lg tracking-widest">
                     <span>WE</span>
                     <Image
-                        src="images/novalogo.svg"
+                        src="/images/novalogo.svg"
                         alt="Nova"
                         width={0}
                         height={0}

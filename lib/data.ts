@@ -115,3 +115,23 @@ export const topnovaProducts: Product[] = [
     slug: "nike-dunk-low-panda"
   },
 ]
+// Génère des variations pour avoir plus de produits à afficher
+export const allSneakersProducts: Product[] = [
+  ...sneakersProducts,
+  ...topnovaProducts,
+  ...sneakersProducts.map((p, i) => ({
+    ...p,
+    id: `${p.id}-dup1-${i}`,
+    slug: `${p.slug}-v2`,
+  })),
+  ...topnovaProducts.map((p, i) => ({
+    ...p,
+    id: `${p.id}-dup1-${i}`,
+    slug: `${p.slug}-v2`,
+  })),
+  ...sneakersProducts.map((p, i) => ({
+    ...p,
+    id: `${p.id}-dup2-${i}`,
+    slug: `${p.slug}-v3`,
+  })),
+]
