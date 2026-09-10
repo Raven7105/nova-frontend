@@ -8,9 +8,12 @@ export const sneakersProducts: Product[] = [
     price: 120,
     originalPrice: 240,
     discount: 50,
-    image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80",
     is24h: true,
-    slug: "new-balance-204l-mushroom"
+    slug: "new-balance-204l-mushroom",
+    category: "sneakers",
+    sizes: ["EU 40", "EU 41", "EU 42", "EU 43", "EU 44", "EU 45"],
+    description: "Modèle iconique New Balance 204L dans son colorway Mushroom terreux. Amorti supérieur et finitions en daim premium.",
   },
   {
     id: "2",
@@ -19,9 +22,12 @@ export const sneakersProducts: Product[] = [
     price: 144,
     originalPrice: 288,
     discount: 50,
-    image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80",
     is24h: true,
-    slug: "asics-gel-kayano-14"
+    slug: "asics-gel-kayano-14",
+    category: "sneakers",
+    sizes: ["EU 39", "EU 40", "EU 41", "EU 42", "EU 43", "EU 44"],
+    description: "La silhouette rétro-running par excellence. Tige en mesh aéré, empiècements métalliques et technologie GEL signature.",
   },
   {
     id: "3",
@@ -30,9 +36,12 @@ export const sneakersProducts: Product[] = [
     price: 166,
     originalPrice: 385,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=600&q=80",
     is24h: true,
-    slug: "adidas-samba-og"
+    slug: "adidas-samba-og",
+    category: "sneakers",
+    sizes: ["EU 38", "EU 39", "EU 40", "EU 41", "EU 42", "EU 43"],
+    description: "L'incontournable Samba OG dans une teinte exclusive Cloud White rehaussée de touches Silver Green. Semelle en gomme naturelle.",
   },
   {
     id: "4",
@@ -41,9 +50,12 @@ export const sneakersProducts: Product[] = [
     price: 171,
     originalPrice: 190,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80",
     is24h: true,
-    slug: "air-jordan-4-retro-bred"
+    slug: "air-jordan-4-retro-bred",
+    category: "sneakers",
+    sizes: ["EU 40", "EU 41", "EU 42", "EU 43", "EU 44", "EU 45", "EU 46"],
+    description: "Édition Reimagined en cuir souple pleine fleur texturé. Logo Nike Air authentique au talon et boîte collector.",
   },
   {
     id: "5",
@@ -52,9 +64,12 @@ export const sneakersProducts: Product[] = [
     price: 110,
     originalPrice: 130,
     discount: 15,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
     is24h: false,
-    slug: "nike-air-force-1-white"
+    slug: "nike-air-force-1-white",
+    category: "sneakers",
+    sizes: ["EU 38", "EU 39", "EU 40", "EU 41", "EU 42", "EU 43", "EU 44", "EU 45"],
+    description: "Le grand classique indémodable de la culture streetwear. Cuir blanc immaculé, semelle cousue et deubré chromé AF1.",
   },
 ]
 
@@ -66,9 +81,12 @@ export const topnovaProducts: Product[] = [
     price: 333,
     originalPrice: 370,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80",
     is24h: false,
-    slug: "air-jordan-4-black-cat"
+    slug: "air-jordan-4-black-cat",
+    category: "sneakers",
+    sizes: ["EU 41", "EU 42", "EU 43", "EU 44"],
+    description: "Le graal monochrome par excellence. Nubuck noir mat premium, œillets brillants et semelle Air visible.",
   },
   {
     id: "7",
@@ -77,9 +95,12 @@ export const topnovaProducts: Product[] = [
     price: 135,
     originalPrice: 150,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
     is24h: true,
-    slug: "ugg-lowmel-chestnut"
+    slug: "ugg-lowmel-chestnut",
+    category: "sneakers",
+    sizes: ["EU 36", "EU 37", "EU 38", "EU 39", "EU 40"],
+    description: "La silhouette hybride de la saison, combinant le confort emblématique UGG avec des lacets larges et une coupe basse.",
   },
   {
     id: "8",
@@ -88,9 +109,12 @@ export const topnovaProducts: Product[] = [
     price: 144,
     originalPrice: 169,
     discount: 15,
-    image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80",
     is24h: true,
-    slug: "asics-gel-nyc-cream"
+    slug: "asics-gel-nyc-cream",
+    category: "sneakers",
+    sizes: ["EU 40", "EU 41", "EU 42", "EU 43", "EU 44"],
+    description: "Inspirée des archives des années 2000, la Gel-NYC associe des teintes crème délicates et une semelle technique hautement amortie.",
   },
   {
     id: "9",
@@ -99,9 +123,12 @@ export const topnovaProducts: Product[] = [
     price: 150,
     originalPrice: 180,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80",
     is24h: true,
-    slug: "new-balance-9060-grey"
+    slug: "new-balance-9060-grey",
+    category: "sneakers",
+    sizes: ["EU 41", "EU 42", "EU 43", "EU 44", "EU 45"],
+    description: "Design futuriste et semelle sculptée ABZORB. Le coloris Grey signature New Balance pour un look architectural affirmé.",
   },
   {
     id: "10",
@@ -110,12 +137,102 @@ export const topnovaProducts: Product[] = [
     price: 120,
     originalPrice: 140,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
     is24h: false,
-    slug: "nike-dunk-low-panda"
+    slug: "nike-dunk-low-panda",
+    category: "sneakers",
+    sizes: ["EU 38", "EU 39", "EU 40", "EU 41", "EU 42", "EU 43"],
+    description: "La paire bicolore la plus demandée au monde. Contraste noir et blanc franc qui s'accorde avec n'importe quel outfit.",
   },
 ]
-// Génère des variations pour avoir plus de produits à afficher
+
+export const clothesProducts: Product[] = [
+  {
+    id: "c1",
+    brand: "STÜSSY",
+    name: "Basic Logo Zip Hoodie Black",
+    price: 145,
+    originalPrice: 165,
+    discount: 12,
+    image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80",
+    is24h: true,
+    slug: "stussy-basic-hoodie-black",
+    category: "clothes",
+    sizes: ["S", "M", "L", "XL"],
+    description: "Sweat à capuche zippé en molleton épais 400 GSM avec le célèbre logo signature sérigraphié sur la poitrine et le dos.",
+  },
+  {
+    id: "c2",
+    brand: "SUPREME",
+    name: "Box Logo Crewneck Heather Grey",
+    price: 240,
+    originalPrice: 280,
+    discount: 15,
+    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&q=80",
+    is24h: true,
+    slug: "supreme-bogo-crewneck-grey",
+    category: "clothes",
+    sizes: ["M", "L", "XL"],
+    description: "La pièce maîtresse de toute garde-robe streetwear. Écusson Box Logo rouge brodé à haute densité sur molleton lourd.",
+  },
+  {
+    id: "c3",
+    brand: "CORTEIZ",
+    name: "Guerillaz Cargo Pants Triple Black",
+    price: 185,
+    originalPrice: 210,
+    discount: 12,
+    image: "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=600&q=80",
+    is24h: true,
+    slug: "corteiz-cargo-triple-black",
+    category: "clothes",
+    sizes: ["S", "M", "L", "XL"],
+    description: "Pantalon cargo militaire multipoches avec logo Alcatraz brodé sur la cuisse. Cordon de serrage aux chevilles.",
+  },
+  {
+    id: "c4",
+    brand: "DENIM TEARS",
+    name: "Cotton Wreath Denim Jacket Light Wash",
+    price: 360,
+    originalPrice: 420,
+    discount: 14,
+    image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&q=80",
+    is24h: false,
+    slug: "denim-tears-wreath-jacket",
+    category: "clothes",
+    sizes: ["M", "L", "XL"],
+    description: "Veste en jean selvedge premium sérigraphiée à la main avec les motifs floraux emblématiques Cotton Wreath de Tremaine Emory.",
+  },
+  {
+    id: "c5",
+    brand: "SP5DER",
+    name: "555555 Angel Number Hoodie Sky Blue",
+    price: 260,
+    originalPrice: 310,
+    discount: 16,
+    image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=600&q=80",
+    is24h: true,
+    slug: "sp5der-555-hoodie-sky",
+    category: "clothes",
+    sizes: ["S", "M", "L", "XL"],
+    description: "Modèle signature de Young Thug avec lettrage en strass et toiles d'araignées imprimées sur un bleu céleste vibrant.",
+  },
+  {
+    id: "c6",
+    brand: "TRAVIS SCOTT",
+    name: "Cactus Jack Utopia Tour Tee",
+    price: 95,
+    originalPrice: 110,
+    discount: 14,
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80",
+    is24h: true,
+    slug: "travis-scott-utopia-tee",
+    category: "clothes",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "T-shirt vintage délavé officiel de la tournée Utopia, confectionné en coton lourd 240 GSM avec graphismes distressés.",
+  },
+]
+
 export const allSneakersProducts: Product[] = [
   ...sneakersProducts,
   ...topnovaProducts,
@@ -134,4 +251,15 @@ export const allSneakersProducts: Product[] = [
     id: `${p.id}-dup2-${i}`,
     slug: `${p.slug}-v3`,
   })),
+]
+
+export const nouveautesProducts: Product[] = [
+  ...sneakersProducts.slice(0, 3),
+  ...clothesProducts.slice(0, 3),
+  ...topnovaProducts.slice(0, 2),
+]
+
+export const allProducts: Product[] = [
+  ...allSneakersProducts,
+  ...clothesProducts,
 ]
