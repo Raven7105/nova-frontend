@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { Shield } from "lucide-react"
+import { SITE_CONFIG } from "@/lib/config"
 
 export const metadata = {
     title: "Mentions Légales | Nova",
@@ -42,7 +43,7 @@ export default function MentionsLegalesPage() {
                         <p><strong>RCCM :</strong> TG-LOM-2024-B-1284 (Tribunal de Commerce de Lomé)</p>
                         <p><strong>NIF :</strong> 1001894231</p>
                         <p><strong>Siège & Boutique :</strong> Boulevard du 13 Janvier, Tokoin, Lomé, Togo</p>
-                        <p><strong>Téléphone & WhatsApp :</strong> +228 90 00 00 00</p>
+                        <p><strong>Téléphone & WhatsApp :</strong> {SITE_CONFIG.whatsapp.displayPhone}</p>
                         <p><strong>Contact :</strong> contact@nova-togo.com</p>
                     </section>
 

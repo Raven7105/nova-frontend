@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import { HelpCircle, ChevronDown, MessageSquare, MessageCircle } from "lucide-react"
+import { SITE_CONFIG, getWhatsAppUrl } from "@/lib/config"
 
 const FAQ_ITEMS = [
     {
@@ -31,7 +32,7 @@ const FAQ_ITEMS = [
     },
     {
         q: "OÙ EST SITUÉE LA BOUTIQUE NOVA TOGO ET QUELS SONT LES HORAIRES ?",
-        a: "Notre boutique physique et nos stocks sont situés sur le Boulevard du 13 Janvier à Tokoin, Lomé, Togo. Nous sommes ouverts du lundi au samedi de 09h à 19h. Vous pouvez aussi nous écrire à tout moment sur WhatsApp au +228 90 00 00 00.",
+        a: `Notre boutique physique et nos stocks sont situés sur le Boulevard du 13 Janvier à Tokoin, Lomé, Togo. Nous sommes ouverts du lundi au samedi de 09h à 19h. Vous pouvez aussi nous écrire à tout moment sur WhatsApp au ${SITE_CONFIG.whatsapp.displayPhone}.`,
         cat: "BOUTIQUE"
     }
 ]
@@ -119,7 +120,7 @@ export default function FAQPage() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                        href="https://wa.me/22890000000?text=Bonjour%20Nova%20Togo%20!%20J'ai%20une%20question."
+                        href={getWhatsAppUrl("Bonjour Nova Togo ! J'ai une question.")}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebd5b] text-white border-3 border-black px-6 py-3 font-black text-xs uppercase tracking-wider shadow-[4px_4px_0px_#000] transition-all"

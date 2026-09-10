@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useCart } from "@/context/CartContext"
 import { formatPrice } from "@/lib/format"
+import { getWhatsAppUrl } from "@/lib/config"
 import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, Sparkles, ShieldCheck, Truck, MessageCircle } from "lucide-react"
 
 export default function CartDrawer() {
@@ -30,7 +31,7 @@ export default function CartDrawer() {
             .map((item) => `- ${item.product.name} (Taille ${item.size}) x${item.quantity} : ${formatPrice(item.product.price * item.quantity)}`)
             .join("\n")
         const message = `Bonjour Nova !\nJe souhaite passer commande de mon panier :\n\n${itemsList}\n\nSous-total : ${formatPrice(subtotal)}\nLivraison : ${shipping === 0 ? "Offerte" : formatPrice(shipping)}\nTOTAL : ${formatPrice(total)}`
-        return `https://wa.me/22890000000?text=${encodeURIComponent(message)}`
+        return getWhatsAppUrl(message)
     }
 
     return (

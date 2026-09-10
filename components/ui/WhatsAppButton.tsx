@@ -2,11 +2,11 @@
 
 import React, { useState } from "react"
 import { MessageCircle, X } from "lucide-react"
+import { getWhatsAppUrl } from "@/lib/config"
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false)
-  const phoneNumber = "22890000000"
-  const defaultMessage = encodeURIComponent("Bonjour Nova ! Je souhaite avoir des informations sur un produit.")
+  const defaultMessage = "Bonjour Nova ! Je souhaite avoir des informations sur un produit."
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
@@ -38,7 +38,7 @@ export default function WhatsAppButton() {
           </p>
 
           <a
-            href={`https://wa.me/${phoneNumber}?text=${defaultMessage}`}
+            href={getWhatsAppUrl(defaultMessage)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#25D366] hover:bg-[#1ebd5b] text-white text-xs font-black rounded-xl transition-all shadow-md active:scale-95"

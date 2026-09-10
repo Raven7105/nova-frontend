@@ -202,7 +202,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     <span>
                         {filteredResults.length} {filteredResults.length > 1 ? "résultats" : "résultat"}
                     </span>
-                    <span className="hidden sm:inline">APPPUYEZ SUR ÉCHAP POUR FERMER</span>
+                    <span className="hidden sm:inline">APPPUYEZ SUR X POUR FERMER</span>
                 </div>
 
             </div>

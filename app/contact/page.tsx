@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, MessageCircle } from "lucide-react"
+import { SITE_CONFIG, getWhatsAppUrl } from "@/lib/config"
 
 export default function ContactPage() {
     const [name, setName] = useState("")
@@ -59,13 +60,13 @@ export default function ContactPage() {
                         
                         {/* Bouton WhatsApp VIP */}
                         <a
-                            href="https://wa.me/22890000000?text=Bonjour%20Nova%20Togo%20!%20Je%20souhaite%20des%20renseignements."
+                            href={getWhatsAppUrl("Bonjour Nova Togo ! Je souhaite des renseignements.")}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#25D366] hover:bg-[#1ebd5b] text-white font-black text-xs uppercase tracking-wider border-3 border-black shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all"
                         >
                             <MessageCircle className="w-4 h-4 stroke-[2.5px]" />
-                            <span>DISCUTER SUR WHATSAPP (+228)</span>
+                            <span>DISCUTER SUR WHATSAPP</span>
                         </a>
 
                         <div className="flex items-start gap-4">
@@ -74,7 +75,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h4 className="text-xs font-black uppercase">TÉLÉPHONE & WHATSAPP</h4>
-                                <p className="text-xs font-bold text-black/80 mt-0.5">+228 90 00 00 00</p>
+                                <p className="text-xs font-bold text-black/80 mt-0.5">{SITE_CONFIG.whatsapp.displayPhone}</p>
                                 <span className="text-[10px] font-bold text-black/60">Ligne directe Togocom / Moov</span>
                             </div>
                         </div>

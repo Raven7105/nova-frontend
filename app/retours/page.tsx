@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { RefreshCw, ShieldCheck, ArrowRight } from "lucide-react"
+import { SITE_CONFIG } from "@/lib/config"
 
 export const metadata = {
     title: "Politique de Retours & Échanges sous 14 jours | Nova",
@@ -45,7 +46,7 @@ export default function RetoursPage() {
                     <section className="space-y-2">
                         <h2 className="text-sm font-black uppercase text-black">1. COMMENT INITIER UN RETOUR OU UN ÉCHANGE ?</h2>
                         <p>
-                            Envoyez simplement un message sur WhatsApp au <strong>+228 90 00 00 00</strong> ou un email à <strong>retours@nova-togo.com</strong> en indiquant votre numéro de commande (#NOV-TG-XXXX). Vous pouvez également passer directement à notre boutique à Lomé pour changer de pointure sur place.
+                            Envoyez simplement un message sur WhatsApp au <strong>{SITE_CONFIG.whatsapp.displayPhone}</strong> ou un email à <strong>retours@nova-togo.com</strong> en indiquant votre numéro de commande (#NOV-TG-XXXX). Vous pouvez également passer directement à notre boutique à Lomé pour changer de pointure sur place.
                         </p>
                     </section>
 

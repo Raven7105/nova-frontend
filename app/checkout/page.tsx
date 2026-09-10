@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useCart } from "@/context/CartContext"
 import { formatPrice } from "@/lib/format"
+import { getWhatsAppUrl } from "@/lib/config"
 import { ShieldCheck, Truck, CreditCard, Lock, ArrowLeft, CheckCircle2, Tag, Sparkles, Phone, Store, MessageCircle } from "lucide-react"
 
 const TOGO_CITIES = [
@@ -597,7 +598,7 @@ export default function CheckoutPage() {
 
                         {/* Option validation WhatsApp */}
                         <a
-                            href={`https://wa.me/22890000000?text=${encodeURIComponent(`Bonjour Nova Togo !\nJe souhaite valider ma commande :\n- Client : ${firstName} ${lastName}\n- Téléphone : ${phone}\n- Ville / Quartier : ${city} (${district})\n- Repère : ${landmark}\n- Mode d'expédition : ${shippingOption}\n- Mode de règlement : ${paymentMethod}\n- Total : ${formatPrice(totalOrder)}`)}`}
+                            href={getWhatsAppUrl(`Bonjour Nova Togo !\nJe souhaite valider ma commande :\n- Client : ${firstName} ${lastName}\n- Téléphone : ${phone}\n- Ville / Quartier : ${city} (${district})\n- Repère : ${landmark}\n- Mode d'expédition : ${shippingOption}\n- Mode de règlement : ${paymentMethod}\n- Total : ${formatPrice(totalOrder)}`)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full py-3 bg-[#25D366] hover:bg-[#1ebd5b] text-white border-3 border-black font-black text-xs uppercase tracking-wider shadow-[4px_4px_0px_#000] flex items-center justify-center gap-2 transition-all"

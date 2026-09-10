@@ -1,6 +1,7 @@
 "use client"
 import { Package, ThumbsUp, CreditCard, ArrowRight, MessageCircle } from "lucide-react"
 import Link from "next/link"
+import { SITE_CONFIG } from "@/lib/config"
 
 export default function Footer() {
     return (
@@ -34,7 +35,7 @@ export default function Footer() {
                         </div>
                         <h3 className="text-sm font-black uppercase mb-2 tracking-wide">SUPPORT WHATSAPP 7J/7</h3>
                         <p className="text-xs font-bold text-black/70 leading-relaxed">
-                            Une équipe réactive joignable directement sur WhatsApp au <strong className="text-black font-black">+228 90 00 00 00</strong>.
+                            Une équipe réactive joignable directement sur WhatsApp au <strong className="text-black font-black">{SITE_CONFIG.whatsapp.displayPhone}</strong>.
                         </p>
                     </div>
 
@@ -120,10 +121,10 @@ export default function Footer() {
                             SERVICE CLIENT
                         </div>
                         <p className="text-xs font-bold text-gray-300 mb-2 leading-relaxed">
-                            📍 Boulevard du 13 Janvier, Tokoin
+                            📍 {SITE_CONFIG.contact.address}
                         </p>
                         <p className="text-xs font-bold text-gray-300 mb-4 leading-relaxed">
-                            📞 +228 90 00 00 00 • Lun - Sam (9h - 19h)
+                            📞 {SITE_CONFIG.whatsapp.displayPhone} • {SITE_CONFIG.contact.hours}
                         </p>
                         <div className="flex gap-2">
                             <span className="bg-white text-black text-[10px] font-black px-2 py-1 border border-white">

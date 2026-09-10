@@ -13,6 +13,7 @@ import { useCart } from "@/context/CartContext"
 import { useWishlist } from "@/context/WishlistContext"
 import SearchModal from "@/components/search/SearchModal"
 import AccountModal from "@/components/account/AccountModal"
+import { getWhatsAppUrl } from "@/lib/config"
 
 const navlinks = [
     { label: "SNEAKERS", href: "/collections/sneakers" },
@@ -91,7 +92,7 @@ export default function Navbar() {
 
                     {/* Raccourci WhatsApp rapide */}
                     <a
-                        href="https://wa.me/22890000000?text=Bonjour%20Nova%20!"
+                        href={getWhatsAppUrl("Bonjour Nova !")}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Contacter sur WhatsApp"

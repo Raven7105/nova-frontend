@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { allProducts, sneakersProducts } from "@/lib/data"
 import { formatPrice } from "@/lib/format"
+import { getWhatsAppUrl } from "@/lib/config"
 import ProductCarousel from "@/components/product/ProductCarousel"
 import { useCart } from "@/context/CartContext"
 import { useWishlist } from "@/context/WishlistContext"
@@ -51,7 +52,7 @@ export default function ProductDetailPage() {
 
     // Lien WhatsApp direct pour commander
     const whatsappOrderMessage = `Bonjour Nova Togo !\nJe souhaite commander :\n- Paire : ${product.brand} - ${product.name}\n- Pointure / Taille : ${selectedSize}\n- Prix : ${formatPrice(product.price)}\n\nEst-elle disponible pour une livraison à Lomé ?`
-    const whatsappUrl = `https://wa.me/22890000000?text=${encodeURIComponent(whatsappOrderMessage)}`
+    const whatsappUrl = getWhatsAppUrl(whatsappOrderMessage)
 
     // Suggestions similaires
     const similarProducts = allProducts.filter((p) => p.id !== product.id && p.category === product.category).slice(0, 6)

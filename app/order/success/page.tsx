@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { CheckCircle2, ShieldCheck, ArrowRight, Sparkles, MessageCircle, Phone } from "lucide-react"
 import { formatPrice } from "@/lib/format"
+import { SITE_CONFIG, getWhatsAppUrl } from "@/lib/config"
 
 function SuccessContent() {
     const searchParams = useSearchParams()
@@ -12,7 +13,7 @@ function SuccessContent() {
     const payment = searchParams.get("payment") || "cod"
     const totalNum = Number(rawTotal) || 65000
 
-    const whatsappTrackUrl = `https://wa.me/22890000000?text=${encodeURIComponent(`Bonjour Nova Togo ! Je viens de passer la commande ${orderId} d'un montant de ${formatPrice(totalNum)}. Pouvez-vous me confirmer la prise en charge du coursier ?`)}`
+    const whatsappTrackUrl = getWhatsAppUrl(`Bonjour Nova Togo ! Je viens de passer la commande ${orderId} d'un montant de ${formatPrice(totalNum)}. Pouvez-vous me confirmer la prise en charge du coursier ?`)
 
     return (
         <div className="max-w-3xl mx-auto px-6 py-16 text-center space-y-8 animate-fade-up">
@@ -66,7 +67,7 @@ function SuccessContent() {
                         <div className="font-black uppercase flex items-center gap-1.5">
                             <Phone className="w-4 h-4" /> Instructions T-Money (Togocom) :
                         </div>
-                        <p>Composez *145# et envoyez le montant de {formatPrice(totalNum)} vers le numéro marchand <strong>+228 90 00 00 00</strong> en indiquant la référence <strong>{orderId}</strong>.</p>
+                        <p>Composez *145# et envoyez le montant de {formatPrice(totalNum)} vers le numéro marchand <strong>{SITE_CONFIG.whatsapp.displayPhone}</strong> en indiquant la référence <strong>{orderId}</strong>.</p>
                     </div>
                 )}
 
