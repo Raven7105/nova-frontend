@@ -39,35 +39,35 @@ export default function CGVPage() {
                     <section className="space-y-2">
                         <h2 className="text-sm font-black uppercase text-black">ARTICLE 1 — OBJET & CHAMP D'APPLICATION</h2>
                         <p>
-                            Les présentes Conditions Générales de Vente régissent l'ensemble des ventes conclues entre la société NOVA ARCHIVE SAS et tout consommateur effectuant un achat sur le site nova-archive.com.
+                            Les présentes Conditions Générales de Vente régissent l'ensemble des ventes conclues entre NOVA TOGO SARL et tout client effectuant un achat sur le site ou dans notre boutique située à Lomé, Togo.
                         </p>
                     </section>
 
                     <section className="space-y-2">
                         <h2 className="text-sm font-black uppercase text-black">ARTICLE 2 — GARANTIE D'AUTHENTICITÉ</h2>
                         <p>
-                            Tous les produits commercialisés sur Nova sont garantis neufs, authentiques et munis de leur emballage d'origine. Chaque article est soumis à un protocole physique d'authentification et scellé par nos experts avant son expédition.
+                            Tous les produits commercialisés chez Nova Togo sont garantis 100% neufs, authentiques et munis de leur emballage d'origine. Chaque article fait l'objet d'un contrôle rigoureux avec scellé d'inviolabilité et certificat d'authenticité.
                         </p>
                     </section>
 
                     <section className="space-y-2">
                         <h2 className="text-sm font-black uppercase text-black">ARTICLE 3 — PRIX ET MODALITÉS DE PAIEMENT</h2>
                         <p>
-                            Les prix sont indiqués en euros (€) Toutes Taxes Comprises (TTC). Le règlement s'effectue par carte bancaire sécurisée (3D Secure), Alma (paiement en 2x, 3x ou 4x sans frais) ou PayPal.
+                            Les prix sont indiqués en Franc CFA (FCFA / XOF) Toutes Taxes Comprises (TTC). Le règlement s'effectue par T-Money (Togocom *145#), Moov Money (Flooz *155#), paiement en espèces à la livraison (Cash on delivery) ou carte bancaire sécurisée (Visa / Mastercard).
                         </p>
                     </section>
 
                     <section className="space-y-2">
-                        <h2 className="text-sm font-black uppercase text-black">ARTICLE 4 — LIVRAISON & DÉLAIS</h2>
+                        <h2 className="text-sm font-black uppercase text-black">ARTICLE 4 — LIVRAISON & DÉLAIS AU TOGO</h2>
                         <p>
-                            Les articles signalés en stock immédiat (⚡ 24H) sont expédiés le jour même pour toute commande passée avant 14h. La livraison est offerte en France et en Europe dès 180 € d'achats.
+                            Les articles signalés en stock immédiat (⚡ 24H) sont disponibles immédiatement dans notre boutique à Lomé et livrés par coursier express le jour même ou sous 24h. La livraison à Lomé est 100% offerte dès 50 000 FCFA d'achats. Les expéditions dans les villes de l'intérieur du Togo (Kara, Sokodé, Kpalimé, etc.) s'effectuent sous 24h à 48h via les services de transport routier.
                         </p>
                     </section>
 
                     <section className="space-y-2">
-                        <h2 className="text-sm font-black uppercase text-black">ARTICLE 5 — DROIT DE RÉTRACTATION & SCELLÉ</h2>
+                        <h2 className="text-sm font-black uppercase text-black">ARTICLE 5 — ÉCHANGES & DROIT DE RETOUR</h2>
                         <p>
-                            Conformément au Code de la consommation, vous disposez d'un délai de 14 jours pour exercer votre droit de rétractation. Pour des raisons évidentes de protection contre la contrefaçon, le scellé de sécurité Nova ne doit en aucun cas être coupé ou endommagé.
+                            Vous disposez d'un délai pour essayer votre paire et demander un échange de pointure ou un retour direct à notre boutique de Lomé. Pour préserver l'inviolabilité du produit, le scellé de sécurité Nova ne doit en aucun cas être coupé ou retiré.
                         </p>
                     </section>
                 </div>

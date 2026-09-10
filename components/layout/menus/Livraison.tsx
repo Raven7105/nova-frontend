@@ -1,31 +1,31 @@
 "use client"
-import { Truck, Clock, ShieldCheck } from "lucide-react"
+import { Truck, Clock, Store } from "lucide-react"
 import Link from "next/link"
 
 const deliveryOptions = [
     {
         icon: Clock,
-        title: "LIVRAISON EXPRESS 24H",
-        desc: "Commandez avant 14h, recevez le lendemain chez vous.",
-        badge: "ULTRA RAPIDE",
+        title: "COURSIER EXPRESS LOMÉ",
+        desc: "Livraison directe à domicile ou bureau dans tous les quartiers de Lomé (Agoè, Tokoin, Bè, etc.).",
+        badge: "OFFERTE DÈS 50 000 FCFA",
         color: "bg-[#7DD3FC]",
         href: "/collections/livraison-24h",
     },
     {
         icon: Truck,
-        title: "LIVRAISON STANDARD 48H",
-        desc: "Offerte à partir de 180€ d'achat partout en Europe.",
-        badge: "OFFERTE DÈS 180€",
+        title: "EXPÉDITION INTÉRIEUR TOGO",
+        desc: "Envoi rapide et sécurisé vers Kara, Sokodé, Kpalimé, Atakpamé et Dapaong via transporteurs.",
+        badge: "TOUT LE TOGO 🇹🇬",
         color: "bg-[#BAE6FD]",
         href: "/faq",
     },
     {
-        icon: ShieldCheck,
-        title: "AUTHENTICITÉ GARANTIE",
-        desc: "Chaque paire est minutieusement vérifiée par nos experts.",
-        badge: "100% CERTIFIÉ",
+        icon: Store,
+        title: "RETRAIT EN BOUTIQUE À LOMÉ",
+        desc: "Venez essayer votre paire et régler en boutique à Lomé en toute sérénité.",
+        badge: "100% GRATUIT",
         color: "bg-white",
-        href: "/authenticite",
+        href: "/contact",
     },
 ]
 

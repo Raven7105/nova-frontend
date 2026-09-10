@@ -67,9 +67,9 @@ export default function Hero() {
 
             {/* Ruban ticker bas de hero */}
             <div className="absolute bottom-0 left-0 right-0 bg-black text-white py-2 px-4 border-t-4 border-black z-20 flex justify-between items-center text-xs font-black uppercase tracking-wider">
-                <span>STOCK DISPONIBLE EN FRANCE</span>
-                <span className="hidden sm:inline">✦ EXPÉDITION IMMÉDIATE ✦</span>
-                <span>PAIEMENT SÉCURISÉ 4X</span>
+                <span>STOCK DISPONIBLE À LOMÉ 🇹🇬</span>
+                <span className="hidden sm:inline">✦ COURSIER EXPRESS 24H ✦</span>
+                <span>T-MONEY • FLOOZ • CASH</span>
             </div>
 
         </div>

@@ -9,11 +9,11 @@ export default function PromoBar() {
                         <span className="bg-black text-white px-2 py-0.5 text-xs font-black">
                             SPECIAL DROP
                         </span>
-                        <span>FRENCH MONTH // JUSQU'À -50%</span>
+                        <span>NOVA TOGO // JUSQU'À -50%</span>
                         <span className="text-black font-black text-base">✦</span>
-                        <span>LIVRAISON 24H DISPONIBLE SUR LES SNEAKERS</span>
+                        <span>COURSIER EXPRESS 24H DISPONIBLE À LOMÉ</span>
                         <span className="text-black font-black text-base">✦</span>
-                        <span>100% AUTHENTIQUE CERTIFIÉ NOVA</span>
+                        <span>100% AUTHENTIQUE CERTIFIÉ NOVA LOMÉ</span>
                         <span className="text-black font-black text-base">✦</span>
                     </div>
                 ))}

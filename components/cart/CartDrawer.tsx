@@ -3,7 +3,8 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useCart } from "@/context/CartContext"
-import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, Sparkles, ShieldCheck, Truck } from "lucide-react"
+import { formatPrice } from "@/lib/format"
+import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, Sparkles, ShieldCheck, Truck, MessageCircle } from "lucide-react"
 
 export default function CartDrawer() {
     const {
@@ -22,6 +23,15 @@ export default function CartDrawer() {
     if (!isOpen) return null
 
     const progressPercentage = Math.min(100, Math.round(((freeShippingThreshold - freeShippingRemaining) / freeShippingThreshold) * 100))
+
+    // Génération du message WhatsApp récapitulatif pour commande rapide
+    const generateWhatsAppOrderUrl = () => {
+        const itemsList = items
+            .map((item) => `- ${item.product.name} (Taille ${item.size}) x${item.quantity} : ${formatPrice(item.product.price * item.quantity)}`)
+            .join("\n")
+        const message = `Bonjour Nova Togo !\nJe souhaite passer commande de mon panier :\n\n${itemsList}\n\nSous-total : ${formatPrice(subtotal)}\nLivraison : ${shipping === 0 ? "Offerte" : formatPrice(shipping)}\nTOTAL : ${formatPrice(total)}\n\nJe suis situé(e) à Lomé.`
+        return `https://wa.me/22890000000?text=${encodeURIComponent(message)}`
+    }
 
     return (
         <div className="fixed inset-0 z-50 flex justify-end">
@@ -62,12 +72,12 @@ export default function CartDrawer() {
                     <div className="flex items-center justify-between text-xs font-black uppercase tracking-wider mb-2">
                         {freeShippingRemaining > 0 ? (
                             <span>
-                                Plus que <strong className="text-[#0284C7] font-black">{freeShippingRemaining.toFixed(2)} €</strong> pour la livraison offerte !
+                                Plus que <strong className="text-[#0284C7] font-black">{formatPrice(freeShippingRemaining)}</strong> pour la livraison offerte à Lomé !
                             </span>
                         ) : (
                             <span className="text-black flex items-center gap-1.5">
                                 <Sparkles className="w-4 h-4 fill-[#7DD3FC]" />
-                                🎉 Félicitations ! Livraison offerte débloquée
+                                🎉 Livraison offerte débloquée pour Lomé !
                             </span>
                         )}
                         <span>{progressPercentage}%</span>
@@ -89,7 +99,7 @@ export default function CartDrawer() {
                             </div>
                             <h3 className="text-lg font-black uppercase">VOTRE PANIER EST VIDE</h3>
                             <p className="text-xs font-bold text-black/70 max-w-xs">
-                                Explorez notre catalogue de paires exclusives et ajoutez vos coups de cœur.
+                                Découvrez nos paires et vêtements streetwear authentifiés en stock à Lomé.
                             </p>
                             <button
                                 onClick={closeCart}
@@ -146,7 +156,7 @@ export default function CartDrawer() {
                                             {item.size}
                                         </span>
                                         {item.product.is24h && (
-                                            <span className="text-[10px] font-black text-black">⚡ 24H</span>
+                                            <span className="text-[10px] font-black text-black">⚡ EN STOCK LOMÉ</span>
                                         )}
                                     </div>
 
@@ -172,8 +182,8 @@ export default function CartDrawer() {
                                             </button>
                                         </div>
 
-                                        <span className="text-sm font-black text-black">
-                                            {(item.product.price * item.quantity).toFixed(2)} €
+                                        <span className="text-xs sm:text-sm font-black text-black">
+                                            {formatPrice(item.product.price * item.quantity)}
                                         </span>
                                     </div>
                                 </div>
@@ -188,17 +198,17 @@ export default function CartDrawer() {
                         <div className="space-y-1.5 text-xs font-bold uppercase tracking-wider">
                             <div className="flex justify-between text-black/70">
                                 <span>Sous-total</span>
-                                <span className="font-black text-black">{subtotal.toFixed(2)} €</span>
+                                <span className="font-black text-black">{formatPrice(subtotal)}</span>
                             </div>
                             <div className="flex justify-between text-black/70">
-                                <span>Livraison</span>
+                                <span>Livraison Lomé</span>
                                 <span className="font-black text-black">
-                                    {shipping === 0 ? "OFFERTE (0.00 €)" : `${shipping.toFixed(2)} €`}
+                                    {shipping === 0 ? "OFFERTE (0 FCFA)" : formatPrice(shipping)}
                                 </span>
                             </div>
                             <div className="pt-2 border-t-2 border-black flex justify-between text-sm font-black text-black">
-                                <span>TOTAL TTC</span>
-                                <span className="text-base">{total.toFixed(2)} €</span>
+                                <span>TOTAL</span>
+                                <span className="text-base font-black">{formatPrice(total)}</span>
                             </div>
                         </div>
 
@@ -206,11 +216,22 @@ export default function CartDrawer() {
                         <Link
                             href="/checkout"
                             onClick={closeCart}
-                            className="w-full py-4 bg-[#7DD3FC] text-black border-4 border-black font-black text-sm uppercase tracking-widest shadow-[5px_5px_0px_#000] hover:bg-[#BAE6FD] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
+                            className="w-full py-3.5 bg-[#7DD3FC] text-black border-4 border-black font-black text-xs uppercase tracking-widest shadow-[5px_5px_0px_#000] hover:bg-[#BAE6FD] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
                         >
-                            <span>COMMANDER</span>
+                            <span>FINALISER LA COMMANDE</span>
                             <ArrowRight className="w-4 h-4 stroke-[3px]" />
                         </Link>
+
+                        {/* Bouton Option WhatsApp Direct */}
+                        <a
+                            href={generateWhatsAppOrderUrl()}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full py-3 bg-[#25D366] hover:bg-[#1ebd5b] text-white border-3 border-black font-black text-xs uppercase tracking-wider shadow-[4px_4px_0px_#000] active:translate-x-0.5 active:translate-y-0.5 transition-all flex items-center justify-center gap-2"
+                        >
+                            <MessageCircle className="w-4 h-4" />
+                            <span>COMMANDER SUR WHATSAPP</span>
+                        </a>
 
                         {/* Badges de réassurance */}
                         <div className="pt-2 flex items-center justify-between text-[10px] font-black uppercase text-black/70 border-t border-black/20">
@@ -218,7 +239,7 @@ export default function CartDrawer() {
                                 <ShieldCheck className="w-3.5 h-3.5 stroke-[2.5px]" /> 100% Authentique
                             </span>
                             <span className="flex items-center gap-1">
-                                <Truck className="w-3.5 h-3.5 stroke-[2.5px]" /> Expédition 24/48h
+                                <Truck className="w-3.5 h-3.5 stroke-[2.5px]" /> Coursier Lomé 24H
                             </span>
                         </div>
                     </div>

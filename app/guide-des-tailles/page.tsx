@@ -151,7 +151,7 @@ export default function SizeGuidePage() {
                 <table className="w-full text-left border-collapse">
                     <thead>
                         <tr className="bg-black text-white text-xs font-black uppercase border-b-3 border-black">
-                            <th className="p-4 border-r-2 border-white/20">EU (FRANCE)</th>
+                            <th className="p-4 border-r-2 border-white/20">POINTURE EU</th>
                             <th className="p-4 border-r-2 border-white/20">US MEN</th>
                             <th className="p-4 border-r-2 border-white/20">US WOMEN</th>
                             <th className="p-4 border-r-2 border-white/20">UK</th>

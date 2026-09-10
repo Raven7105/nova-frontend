@@ -7,8 +7,8 @@ const highlights = [
         icon: Flame,
         tag: "HOT DROP",
         title: "JORDAN 4 BRED REIMAGINED",
-        desc: "Restock limité en pointures 40 à 46.",
-        price: "171 €",
+        desc: "Restock limité disponible immédiatement à Lomé.",
+        price: "95 000 FCFA",
         link: "/products/air-jordan-4-retro-bred"
     },
     {
@@ -16,15 +16,15 @@ const highlights = [
         tag: "NOUVEAU",
         title: "ASICS GEL-KAYANO 14",
         desc: "Coloris Midnight White disponible maintenant.",
-        price: "144 €",
+        price: "75 000 FCFA",
         link: "/products/asics-gel-kayano-14"
     },
     {
         icon: Sparkles,
         tag: "POPULAIRE",
         title: "ADIDAS SAMBA OG CLOUD",
-        desc: "Le classique intemporel enfin de retour en stock.",
-        price: "166 €",
+        desc: "Le classique intemporel en stock au magasin.",
+        price: "85 000 FCFA",
         link: "/products/adidas-samba-og"
     },
 ]

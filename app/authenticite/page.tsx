@@ -83,7 +83,7 @@ export default function AuthenticityPage() {
                     </h1>
 
                     <p className="text-sm md:text-base font-bold text-black/80 leading-relaxed max-w-2xl">
-                        Dans un marché saturé de contrefaçons toujours plus poussées, Nova applique une rigueur chirurgicale. Chaque produit proposé sur notre plateforme est physiquement contrôlé dans nos ateliers en France.
+                        Dans un marché saturé de contrefaçons toujours plus poussées, Nova Togo applique une rigueur chirurgicale. Chaque paire proposée dans notre boutique et sur notre site est physiquement contrôlée et certifiée à Lomé.
                     </p>
                 </div>
             </div>

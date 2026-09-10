@@ -5,6 +5,7 @@ import { Timer, Tag, ArrowUpRight, Heart, ShoppingBag } from "lucide-react"
 import { Product } from "@/types"
 import { useWishlist } from "@/context/WishlistContext"
 import { useCart } from "@/context/CartContext"
+import { formatPrice } from "@/lib/format"
 
 type ProductCardProps = {
     product: Product
@@ -93,12 +94,12 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 <div className="flex items-center justify-between gap-2 mt-2 pt-2 border-t-2 border-black/10">
                     <div className="flex items-baseline gap-2">
-                        <span className="text-sm md:text-base font-black text-black">
-                            {product.price.toFixed(2)} €
+                        <span className="text-xs md:text-sm font-black text-black">
+                            {formatPrice(product.price)}
                         </span>
                         {product.discount > 0 && (
-                            <span className="text-xs line-through font-bold text-black/40">
-                                {product.originalPrice.toFixed(2)} €
+                            <span className="text-[11px] line-through font-bold text-black/40">
+                                {formatPrice(product.originalPrice)}
                             </span>
                         )}
                     </div>

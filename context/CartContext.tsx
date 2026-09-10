@@ -22,8 +22,8 @@ type CartContextType = {
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
 
-const FREE_SHIPPING_THRESHOLD = 180
-const STANDARD_SHIPPING_COST = 9.90
+const FREE_SHIPPING_THRESHOLD = 50000 // 50 000 FCFA
+const STANDARD_SHIPPING_COST = 1500 // 1 500 FCFA (Coursier Lomé)
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
     const [items, setItems] = useState<CartItem[]>([])

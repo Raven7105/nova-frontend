@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Globe, Search, User, ShoppingBag, Menu, Heart } from "lucide-react"
+import { Globe, Search, User, ShoppingBag, Menu, Heart, MessageCircle } from "lucide-react"
 import { useState } from "react"
 import SneakersMenu from "./menus/Sneakears"
 import ClothesMenu from "./menus/Clothes"
@@ -87,17 +87,29 @@ export default function Navbar() {
                     <DropdownMenu>
                         <DropdownMenuTrigger className="hidden sm:flex items-center gap-1.5 text-xs font-black uppercase border-3 border-black bg-white px-2.5 py-1.5 shadow-[3px_3px_0px_#000] hover:bg-[#BAE6FD] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer">
                             <Globe className="w-4 h-4 stroke-[2.5px]" />
-                            <span>FR</span>
+                            <span>🇹🇬 LOMÉ (FCFA)</span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="border-3 border-black shadow-[4px_4px_0px_#000] bg-white rounded-none p-1 font-bold text-xs">
                             <DropdownMenuItem className="cursor-pointer hover:bg-[#BAE6FD] rounded-none font-bold">
-                                🇫🇷 Français (€)
+                                🇹🇬 Togo — Lomé (FCFA)
                             </DropdownMenuItem>
                             <DropdownMenuItem className="cursor-pointer hover:bg-[#BAE6FD] rounded-none font-bold">
-                                🇬🇧 English (€)
+                                🌍 Zone UEMOA (FCFA)
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
+
+                    {/* Raccourci WhatsApp rapide */}
+                    <a
+                        href="https://wa.me/22890000000?text=Bonjour%20Nova%20Togo%20!"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Contacter sur WhatsApp"
+                        className="hidden md:flex items-center gap-1.5 border-3 border-black bg-[#25D366] text-white px-2.5 py-1.5 text-xs font-black uppercase shadow-[3px_3px_0px_#000] hover:bg-[#1ebd5b] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
+                    >
+                        <MessageCircle className="w-4 h-4 stroke-[2.5px]" />
+                        <span>WHATSAPP</span>
+                    </a>
 
                     {/* Bouton Recherche */}
                     <button

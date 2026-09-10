@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Search, X, Sparkles, ArrowRight, Zap, Tag } from "lucide-react"
 import { allProducts } from "@/lib/data"
 import { Product } from "@/types"
+import { formatPrice } from "@/lib/format"
 
 type SearchModalProps = {
     isOpen: boolean
@@ -178,12 +179,12 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
                                 <div className="flex items-center gap-3 shrink-0">
                                     <div className="text-right">
-                                        <div className="text-sm font-black text-black">
-                                            {product.price.toFixed(2)} €
+                                        <div className="text-xs sm:text-sm font-black text-black">
+                                            {formatPrice(product.price)}
                                         </div>
                                         {product.discount > 0 && (
                                             <span className="text-[10px] font-bold text-black/50 line-through">
-                                                {product.originalPrice.toFixed(2)} €
+                                                {formatPrice(product.originalPrice)}
                                             </span>
                                         )}
                                     </div>

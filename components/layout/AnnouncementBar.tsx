@@ -2,10 +2,10 @@
 import { Bell, CreditCard, RefreshCw, Truck } from "lucide-react"
 
 const messages = [
-    { icon: Truck, text: "Livraison offerte dès 180€" },
-    { icon: RefreshCw, text: "3 jours pour changer d'avis" },
-    { icon: CreditCard, text: "Paiement 2, 3, 4 fois sans frais" },
-    { icon: Bell, text: "10€ offerts avec la newsletter" },
+    { icon: Truck, text: "Livraison offerte dès 50 000 FCFA à Lomé" },
+    { icon: CreditCard, text: "Paiement T-Money, Flooz & Espèces à la livraison" },
+    { icon: RefreshCw, text: "Stock 100% authentique disponible à Lomé 🇹🇬" },
+    { icon: Bell, text: "Commande et assistance rapide par WhatsApp" },
 ]
 
 export default function AnnouncementBar() {

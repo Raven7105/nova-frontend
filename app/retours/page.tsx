@@ -43,23 +43,23 @@ export default function RetoursPage() {
 
                 <div className="space-y-6 text-xs sm:text-sm font-bold text-black/80 leading-relaxed">
                     <section className="space-y-2">
-                        <h2 className="text-sm font-black uppercase text-black">1. COMMENT INITIER UN RETOUR ?</h2>
+                        <h2 className="text-sm font-black uppercase text-black">1. COMMENT INITIER UN RETOUR OU UN ÉCHANGE ?</h2>
                         <p>
-                            Envoyez simplement un email à <strong>retours@nova-archive.com</strong> en indiquant votre numéro de commande (#NOV-XXXX) et le motif de votre retour (demande d'échange de taille ou remboursement).
+                            Envoyez simplement un message sur WhatsApp au <strong>+228 90 00 00 00</strong> ou un email à <strong>retours@nova-togo.com</strong> en indiquant votre numéro de commande (#NOV-TG-XXXX). Vous pouvez également passer directement à notre boutique à Lomé pour changer de pointure sur place.
                         </p>
                     </section>
 
                     <section className="space-y-2">
                         <h2 className="text-sm font-black uppercase text-black">2. ÉTAT DU PRODUIT RETOURNÉ</h2>
                         <p>
-                            La paire ou le vêtement doit être retourné dans son état rigoureusement neuf, dans sa boîte d'origine non abîmée, avec l'ensemble des lacets de rechange ou accessoires, et impérativement avec le scellé plastique Nova scellé intact.
+                            La paire ou le vêtement doit être restitué dans son état strictement neuf, dans sa boîte d'origine intacte, avec tous les accessoires et impérativement avec le scellé de sécurité Nova intact.
                         </p>
                     </section>
 
                     <section className="space-y-2">
-                        <h2 className="text-sm font-black uppercase text-black">3. DÉLAI DE REMBOURSEMENT</h2>
+                        <h2 className="text-sm font-black uppercase text-black">3. ÉCHANGE OU REMBOURSEMENT RAPIDE</h2>
                         <p>
-                            Dès réception et vérification physique par notre équipe d'authentification sous 48h ouvrées, votre remboursement est exécuté directement sur le moyen de paiement utilisé lors de la commande.
+                            Dès vérification physique dans notre boutique à Lomé sous 24h, l'échange de pointure est immédiat ou votre remboursement est émis via T-Money, Flooz ou espèces.
                         </p>
                     </section>
                 </div>

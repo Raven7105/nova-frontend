@@ -193,8 +193,8 @@ export default function ClothesCollectionPage() {
                             className="bg-white text-black font-black text-xs uppercase px-3 py-1.5 border-2 border-black shadow-[3px_3px_0px_#000] outline-none cursor-pointer focus:bg-[#BAE6FD]"
                         >
                             <option value="featured">✦ EN VEDETTE</option>
-                            <option value="price-asc">PRIX CROISSANT (€ → €€€)</option>
-                            <option value="price-desc">PRIX DÉCROISSANT (€€€ → €)</option>
+                            <option value="price-asc">PRIX CROISSANT (FCFA)</option>
+                            <option value="price-desc">PRIX DÉCROISSANT (FCFA)</option>
                             <option value="discount">MEILLEURES REMISES (%)</option>
                         </select>
                     </div>

@@ -36,14 +36,14 @@ export default function MentionsLegalesPage() {
 
                 <div className="space-y-6 text-xs sm:text-sm font-bold text-black/80 leading-relaxed">
                     <section className="space-y-1.5">
-                        <h2 className="text-sm font-black uppercase text-black">ÉDITEUR DE LA PLATEFORME</h2>
-                        <p><strong>Dénomination :</strong> NOVA ARCHIVE SAS</p>
-                        <p><strong>Capital social :</strong> 50 000 €</p>
-                        <p><strong>RCS :</strong> Paris B 912 345 678</p>
-                        <p><strong>Numéro TVA Intracommunautaire :</strong> FR 89 912345678</p>
-                        <p><strong>Siège social :</strong> 24 Rue de la Paix, 75002 Paris, France</p>
-                        <p><strong>Directeur de la publication :</strong> Alexandre Mercier</p>
-                        <p><strong>Contact :</strong> contact@nova-archive.com</p>
+                        <h2 className="text-sm font-black uppercase text-black">ÉDITEUR DE LA PLATEFORME & BOUTIQUE</h2>
+                        <p><strong>Dénomination :</strong> NOVA TOGO SARL</p>
+                        <p><strong>Capital social :</strong> 5 000 000 FCFA</p>
+                        <p><strong>RCCM :</strong> TG-LOM-2024-B-1284 (Tribunal de Commerce de Lomé)</p>
+                        <p><strong>NIF :</strong> 1001894231</p>
+                        <p><strong>Siège & Boutique :</strong> Boulevard du 13 Janvier, Tokoin, Lomé, Togo</p>
+                        <p><strong>Téléphone & WhatsApp :</strong> +228 90 00 00 00</p>
+                        <p><strong>Contact :</strong> contact@nova-togo.com</p>
                     </section>
 
                     <section className="space-y-1.5">

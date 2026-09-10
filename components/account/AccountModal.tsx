@@ -98,8 +98,8 @@ export default function AccountModal({ isOpen, onClose }: AccountModalProps) {
                                     1x Air Jordan 4 Retro Bred Reimagined (EU 42)
                                 </p>
                                 <div className="text-[11px] font-bold text-black/50 pt-1 border-t border-black/10 flex justify-between">
-                                    <span>Expédiée le 14/08/2026</span>
-                                    <span className="font-black text-black">171.00 €</span>
+                                    <span>Expédiée le 14/08/2026 • Livrée à Lomé</span>
+                                    <span className="font-black text-black">95 000 FCFA</span>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@ export default function AccountModal({ isOpen, onClose }: AccountModalProps) {
                         </form>
 
                         <div className="p-3 border-2 border-black bg-[#F0F9FF] text-[11px] font-bold text-black/70 text-center">
-                            ✦ 10€ offerts automatiquement crédités sur votre premier achat dès l'inscription.
+                            ✦ 5 000 FCFA offerts automatiquement crédités sur votre premier achat dès l'inscription.
                         </div>
                     </div>
                 )}
