@@ -13,7 +13,7 @@ export const sneakersProducts: Product[] = [
     slug: "new-balance-204l-mushroom",
     category: "sneakers",
     sizes: ["EU 40", "EU 41", "EU 42", "EU 43", "EU 44", "EU 45"],
-    description: "Modèle iconique New Balance 204L dans son colorway Mushroom terreux. Amorti supérieur et finitions en daim premium. Stock authentifié disponible à Lomé.",
+    description: "Modèle iconique New Balance 204L dans son colorway Mushroom terreux. Amorti supérieur et finitions en daim premium. Stock authentifié disponible immédiatement.",
   },
   {
     id: "2",
@@ -27,7 +27,7 @@ export const sneakersProducts: Product[] = [
     slug: "asics-gel-kayano-14",
     category: "sneakers",
     sizes: ["EU 39", "EU 40", "EU 41", "EU 42", "EU 43", "EU 44"],
-    description: "La silhouette rétro-running par excellence. Tige en mesh aéré, empiècements métalliques et technologie GEL signature. Disponible en stock à Lomé.",
+    description: "La silhouette rétro-running par excellence. Tige en mesh aéré, empiècements métalliques et technologie GEL signature. Disponible en stock.",
   },
   {
     id: "3",
@@ -41,7 +41,7 @@ export const sneakersProducts: Product[] = [
     slug: "adidas-samba-og",
     category: "sneakers",
     sizes: ["EU 38", "EU 39", "EU 40", "EU 41", "EU 42", "EU 43"],
-    description: "L'incontournable Samba OG dans une teinte exclusive Cloud White rehaussée de touches Silver Green. Semelle en gomme naturelle. Prêt pour livraison immédiate à Lomé.",
+    description: "L'incontournable Samba OG dans une teinte exclusive Cloud White rehaussée de touches Silver Green. Semelle en gomme naturelle. Prêt pour expédition immédiate.",
   },
   {
     id: "4",
@@ -55,7 +55,7 @@ export const sneakersProducts: Product[] = [
     slug: "air-jordan-4-retro-bred",
     category: "sneakers",
     sizes: ["EU 40", "EU 41", "EU 42", "EU 43", "EU 44", "EU 45", "EU 46"],
-    description: "Édition Reimagined en cuir souple pleine fleur texturé. Logo Nike Air authentique au talon et boîte collector scellée à Lomé.",
+    description: "Édition Reimagined en cuir souple pleine fleur texturé. Logo Nike Air authentique au talon et boîte collector scellée.",
   },
   {
     id: "5",
@@ -69,7 +69,7 @@ export const sneakersProducts: Product[] = [
     slug: "nike-air-force-1-white",
     category: "sneakers",
     sizes: ["EU 38", "EU 39", "EU 40", "EU 41", "EU 42", "EU 43", "EU 44", "EU 45"],
-    description: "Le grand classique indémodable de la culture streetwear. Cuir blanc immaculé, semelle cousue et deubré chromé AF1. Stock immédiat à Lomé.",
+    description: "Le grand classique indémodable de la culture streetwear. Cuir blanc immaculé, semelle cousue et deubré chromé AF1. Stock immédiat 24h.",
   },
 ]
 
@@ -100,7 +100,7 @@ export const topnovaProducts: Product[] = [
     slug: "ugg-lowmel-chestnut",
     category: "sneakers",
     sizes: ["EU 36", "EU 37", "EU 38", "EU 39", "EU 40"],
-    description: "La silhouette hybride de la saison, combinant le confort emblématique UGG avec des lacets larges et une coupe basse. Stock direct Lomé.",
+    description: "La silhouette hybride de la saison, combinant le confort emblématique UGG avec des lacets larges et une coupe basse.",
   },
   {
     id: "8",
@@ -142,7 +142,7 @@ export const topnovaProducts: Product[] = [
     slug: "nike-dunk-low-panda",
     category: "sneakers",
     sizes: ["EU 38", "EU 39", "EU 40", "EU 41", "EU 42", "EU 43"],
-    description: "La paire bicolore la plus demandée au monde. Contraste noir et blanc franc qui s'accorde avec n'importe quel outfit. Disponible en magasin à Lomé.",
+    description: "La paire bicolore la plus demandée au monde. Contraste noir et blanc franc qui s'accorde avec n'importe quel outfit. Disponible en stock immédiat.",
   },
 ]
 

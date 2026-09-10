@@ -29,7 +29,7 @@ export default function CartDrawer() {
         const itemsList = items
             .map((item) => `- ${item.product.name} (Taille ${item.size}) x${item.quantity} : ${formatPrice(item.product.price * item.quantity)}`)
             .join("\n")
-        const message = `Bonjour Nova Togo !\nJe souhaite passer commande de mon panier :\n\n${itemsList}\n\nSous-total : ${formatPrice(subtotal)}\nLivraison : ${shipping === 0 ? "Offerte" : formatPrice(shipping)}\nTOTAL : ${formatPrice(total)}\n\nJe suis situé(e) à Lomé.`
+        const message = `Bonjour Nova !\nJe souhaite passer commande de mon panier :\n\n${itemsList}\n\nSous-total : ${formatPrice(subtotal)}\nLivraison : ${shipping === 0 ? "Offerte" : formatPrice(shipping)}\nTOTAL : ${formatPrice(total)}`
         return `https://wa.me/22890000000?text=${encodeURIComponent(message)}`
     }
 
@@ -72,12 +72,12 @@ export default function CartDrawer() {
                     <div className="flex items-center justify-between text-xs font-black uppercase tracking-wider mb-2">
                         {freeShippingRemaining > 0 ? (
                             <span>
-                                Plus que <strong className="text-[#0284C7] font-black">{formatPrice(freeShippingRemaining)}</strong> pour la livraison offerte à Lomé !
+                                Plus que <strong className="text-[#0284C7] font-black">{formatPrice(freeShippingRemaining)}</strong> pour la livraison offerte !
                             </span>
                         ) : (
                             <span className="text-black flex items-center gap-1.5">
                                 <Sparkles className="w-4 h-4 fill-[#7DD3FC]" />
-                                🎉 Livraison offerte débloquée pour Lomé !
+                                🎉 Livraison offerte débloquée !
                             </span>
                         )}
                         <span>{progressPercentage}%</span>
@@ -156,7 +156,7 @@ export default function CartDrawer() {
                                             {item.size}
                                         </span>
                                         {item.product.is24h && (
-                                            <span className="text-[10px] font-black text-black">⚡ EN STOCK LOMÉ</span>
+                                            <span className="text-[10px] font-black text-black">⚡ EN STOCK 24H</span>
                                         )}
                                     </div>
 
@@ -201,7 +201,7 @@ export default function CartDrawer() {
                                 <span className="font-black text-black">{formatPrice(subtotal)}</span>
                             </div>
                             <div className="flex justify-between text-black/70">
-                                <span>Livraison Lomé</span>
+                                <span>Livraison</span>
                                 <span className="font-black text-black">
                                     {shipping === 0 ? "OFFERTE (0 FCFA)" : formatPrice(shipping)}
                                 </span>
@@ -239,7 +239,7 @@ export default function CartDrawer() {
                                 <ShieldCheck className="w-3.5 h-3.5 stroke-[2.5px]" /> 100% Authentique
                             </span>
                             <span className="flex items-center gap-1">
-                                <Truck className="w-3.5 h-3.5 stroke-[2.5px]" /> Coursier Lomé 24H
+                                <Truck className="w-3.5 h-3.5 stroke-[2.5px]" /> Expédition Express 24H
                             </span>
                         </div>
                     </div>

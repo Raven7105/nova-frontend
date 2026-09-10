@@ -1,5 +1,5 @@
 "use client"
-import { Package, Phone, ThumbsUp, CreditCard, ArrowRight, MessageCircle } from "lucide-react"
+import { Package, ThumbsUp, CreditCard, ArrowRight, MessageCircle } from "lucide-react"
 import Link from "next/link"
 
 export default function Footer() {
@@ -10,10 +10,10 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6 md:px-8 py-16">
                 <div className="text-center mb-10">
                     <span className="bg-[#BAE6FD] text-black font-black uppercase text-xs px-3 py-1 border-2 border-black shadow-[3px_3px_0px_#000] inline-block -rotate-1">
-                        ENGAGEMENTS // NOVA TOGO 🇹🇬
+                        ENGAGEMENTS // NOVA
                     </span>
                     <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight mt-3">
-                        POURQUOI COMMANDER CHEZ NOVA TOGO ?
+                        POURQUOI COMMANDER CHEZ NOVA ?
                     </h2>
                 </div>
 
@@ -22,9 +22,9 @@ export default function Footer() {
                         <div className="border-2 border-black bg-[#BAE6FD] p-3 w-fit mb-4 shadow-[2px_2px_0px_#000]">
                             <Package className="w-6 h-6 stroke-[2.5px]" />
                         </div>
-                        <h3 className="text-sm font-black uppercase mb-2 tracking-wide">LIVRAISON COURSIER</h3>
+                        <h3 className="text-sm font-black uppercase mb-2 tracking-wide">LIVRAISON OFFERTE</h3>
                         <p className="text-xs font-bold text-black/70 leading-relaxed">
-                            Livraison express partout à Lomé, offerte dès <strong className="text-black font-black">50 000 FCFA</strong> d&apos;achats avec suivi en temps réel.
+                            Livraison express offerte dès <strong className="text-black font-black">50 000 FCFA</strong> d&apos;achats avec suivi en temps réel.
                         </p>
                     </div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
                         </div>
                         <h3 className="text-sm font-black uppercase mb-2 tracking-wide">SUPPORT WHATSAPP 7J/7</h3>
                         <p className="text-xs font-bold text-black/70 leading-relaxed">
-                            Une équipe réactive à Lomé joignable directement sur WhatsApp au <strong className="text-black font-black">+228 90 00 00 00</strong>.
+                            Une équipe réactive joignable directement sur WhatsApp au <strong className="text-black font-black">+228 90 00 00 00</strong>.
                         </p>
                     </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
                         </div>
                         <h3 className="text-sm font-black uppercase mb-2 tracking-wide">100% AUTHENTIQUE</h3>
                         <p className="text-xs font-bold text-black/70 leading-relaxed">
-                            Chaque paire disponible chez <strong className="text-black font-black">Nova Togo</strong> fait l&apos;objet d&apos;un contrôle physique avec scellé garanti.
+                            Chaque paire disponible chez <strong className="text-black font-black">Nova</strong> fait l&apos;objet d&apos;un contrôle physique avec scellé garanti.
                         </p>
                     </div>
 
@@ -52,7 +52,7 @@ export default function Footer() {
                         <div className="border-2 border-black bg-[#7DD3FC] p-3 w-fit mb-4 shadow-[2px_2px_0px_#000]">
                             <CreditCard className="w-6 h-6 stroke-[2.5px]" />
                         </div>
-                        <h3 className="text-sm font-black uppercase mb-2 tracking-wide">T-MONEY, FLOOZ & CASH</h3>
+                        <h3 className="text-sm font-black uppercase mb-2 tracking-wide">PAIEMENT SÉCURISÉ</h3>
                         <p className="text-xs font-bold text-black/70 leading-relaxed">
                             Réglez par Mobile Money ou directement en <strong className="text-black font-black">espèces à la livraison</strong> après réception de votre colis.
                         </p>
@@ -71,7 +71,7 @@ export default function Footer() {
                         </div>
                         <ul className="space-y-3 text-xs font-bold uppercase tracking-wider text-gray-300">
                             <li><Link href="/collections/sneakers" className="hover:text-[#7DD3FC] transition-colors">✦ Sneakers Exclusives</Link></li>
-                            <li><Link href="/collections/livraison-24h" className="hover:text-[#7DD3FC] transition-colors">✦ Stock Immédiat Lomé</Link></li>
+                            <li><Link href="/collections/livraison-24h" className="hover:text-[#7DD3FC] transition-colors">✦ Stock Immédiat 24H</Link></li>
                             <li><Link href="/collections/clothes" className="hover:text-[#7DD3FC] transition-colors">✦ Streetwear Archive</Link></li>
                             <li><Link href="/collections/nouveautes" className="hover:text-[#7DD3FC] transition-colors">✦ Nouveautés & Drops</Link></li>
                         </ul>
@@ -83,20 +83,20 @@ export default function Footer() {
                             INFORMATIONS
                         </div>
                         <ul className="space-y-3 text-xs font-bold uppercase tracking-wider text-gray-300">
-                            <li><Link href="/faq" className="hover:text-[#BAE6FD] transition-colors">✦ FAQ & Livraisons Togo</Link></li>
+                            <li><Link href="/faq" className="hover:text-[#BAE6FD] transition-colors">✦ FAQ & Livraisons</Link></li>
                             <li><Link href="/authenticite" className="hover:text-[#BAE6FD] transition-colors">✦ Authenticité Certifiée</Link></li>
                             <li><Link href="/guide-des-tailles" className="hover:text-[#BAE6FD] transition-colors">✦ Guide des Pointures</Link></li>
-                            <li><Link href="/retours" className="hover:text-[#BAE6FD] transition-colors">✦ Échanges & Retours Lomé</Link></li>
+                            <li><Link href="/retours" className="hover:text-[#BAE6FD] transition-colors">✦ Échanges & Retours</Link></li>
                         </ul>
                     </div>
 
                     {/* Newsletter */}
                     <div>
                         <div className="inline-block bg-white text-black border-2 border-white px-2 py-0.5 font-black text-xs uppercase tracking-wider mb-5">
-                            NOVA CLUB TOGO
+                            NOVA CLUB
                         </div>
                         <p className="text-xs font-bold text-gray-300 mb-4 leading-relaxed">
-                            Inscrivez-vous pour débloquer <strong className="text-white">5 000 FCFA offerts</strong> sur votre première commande et recevoir les alertes des arrivages à Lomé.
+                            Inscrivez-vous pour débloquer <strong className="text-white">5 000 FCFA offerts</strong> sur votre première commande et recevoir les alertes des arrivages.
                         </p>
                         <form onSubmit={(e) => e.preventDefault()} className="flex items-stretch shadow-[4px_4px_0px_#7DD3FC]">
                             <input
@@ -117,13 +117,13 @@ export default function Footer() {
                     {/* Boutique & Contact */}
                     <div>
                         <div className="inline-block bg-[#7DD3FC] text-black border-2 border-white px-2 py-0.5 font-black text-xs uppercase tracking-wider mb-5">
-                            BOUTIQUE LOMÉ
+                            SERVICE CLIENT
                         </div>
                         <p className="text-xs font-bold text-gray-300 mb-2 leading-relaxed">
-                            📍 Boulevard du 13 Janvier, Tokoin / Lomé, TOGO
+                            📍 Boulevard du 13 Janvier, Tokoin
                         </p>
                         <p className="text-xs font-bold text-gray-300 mb-4 leading-relaxed">
-                            📞 +228 90 00 00 00 • Ouvert du Lun au Sam (9h - 19h)
+                            📞 +228 90 00 00 00 • Lun - Sam (9h - 19h)
                         </p>
                         <div className="flex gap-2">
                             <span className="bg-white text-black text-[10px] font-black px-2 py-1 border border-white">
@@ -142,9 +142,9 @@ export default function Footer() {
 
                 {/* Bas du footer */}
                 <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between text-xs font-bold text-gray-400 gap-4">
-                    <span>© {new Date().getFullYear()} NOVA TOGO — SNEAKERS & STREETWEAR LOMÉ — TOUS DROITS RÉSERVÉS.</span>
+                    <span>© {new Date().getFullYear()} NOVA — SNEAKERS & STREETWEAR — TOUS DROITS RÉSERVÉS.</span>
                     <span className="bg-white text-black px-2 py-0.5 border border-white font-black text-[10px]">
-                        LOMÉ // TOGO 🇹🇬
+                        AUTHENTIC // ARCHIVE
                     </span>
                 </div>
             </div>
@@ -153,7 +153,7 @@ export default function Footer() {
             <div className="bg-[#BAE6FD] py-4 px-6 border-t-4 border-black flex flex-wrap justify-center gap-6 md:gap-10 text-xs font-black uppercase text-black tracking-wider">
                 <Link href="/mentions-legales" className="hover:underline">MENTIONS LÉGALES</Link>
                 <span>✦</span>
-                <Link href="/cgv" className="hover:underline">CGV TOGO</Link>
+                <Link href="/cgv" className="hover:underline">CGV</Link>
                 <span>✦</span>
                 <Link href="/retours" className="hover:underline">RETOURS & ÉCHANGES</Link>
                 <span>✦</span>

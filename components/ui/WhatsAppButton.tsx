@@ -5,8 +5,8 @@ import { MessageCircle, X } from "lucide-react"
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false)
-  const phoneNumber = "22890000000" // Numéro WhatsApp Togo
-  const defaultMessage = encodeURIComponent("Bonjour Nova Togo ! Je souhaite avoir des informations sur un produit.")
+  const phoneNumber = "22890000000"
+  const defaultMessage = encodeURIComponent("Bonjour Nova ! Je souhaite avoir des informations sur un produit.")
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
               </span>
               <div>
-                <h4 className="text-xs font-black uppercase tracking-wider text-black">Service Client Lomé</h4>
+                <h4 className="text-xs font-black uppercase tracking-wider text-black">Service Client</h4>
                 <p className="text-[10px] text-black/50 font-bold">En ligne • Réponse en &lt; 5 min</p>
               </div>
             </div>
@@ -34,7 +34,7 @@ export default function WhatsAppButton() {
           </div>
 
           <p className="text-xs text-black/70 my-3 font-medium leading-relaxed">
-            Besoin d&apos;aide pour une pointure, une commande ou la livraison à Lomé ? Discutez avec nous sur WhatsApp !
+            Besoin d&apos;aide pour une pointure, une commande ou votre livraison ? Discutez avec nous directement sur WhatsApp !
           </p>
 
           <a
@@ -53,7 +53,7 @@ export default function WhatsAppButton() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1ebd5b] text-white shadow-xl hover:shadow-2xl border-2 border-white transition-all transform hover:scale-105 active:scale-95"
-        aria-label="Ouvrir le chat WhatsApp Nova Togo"
+        aria-label="Ouvrir le chat WhatsApp Nova"
       >
         <span className="absolute -top-1 -right-1 flex h-4 w-4">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>

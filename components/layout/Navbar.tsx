@@ -84,24 +84,14 @@ export default function Navbar() {
                     className="flex items-center space-x-2.5 sm:space-x-3"
                     onMouseEnter={() => setActiveMenu(null)}
                 >
-                    <DropdownMenu>
-                        <DropdownMenuTrigger className="hidden sm:flex items-center gap-1.5 text-xs font-black uppercase border-3 border-black bg-white px-2.5 py-1.5 shadow-[3px_3px_0px_#000] hover:bg-[#BAE6FD] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer">
-                            <Globe className="w-4 h-4 stroke-[2.5px]" />
-                            <span>🇹🇬 LOMÉ (FCFA)</span>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent className="border-3 border-black shadow-[4px_4px_0px_#000] bg-white rounded-none p-1 font-bold text-xs">
-                            <DropdownMenuItem className="cursor-pointer hover:bg-[#BAE6FD] rounded-none font-bold">
-                                🇹🇬 Togo — Lomé (FCFA)
-                            </DropdownMenuItem>
-                            <DropdownMenuItem className="cursor-pointer hover:bg-[#BAE6FD] rounded-none font-bold">
-                                🌍 Zone UEMOA (FCFA)
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <div className="hidden sm:flex items-center gap-1.5 text-xs font-black uppercase border-3 border-black bg-white px-2.5 py-1.5 shadow-[3px_3px_0px_#000]">
+                        <Globe className="w-4 h-4 stroke-[2.5px]" />
+                        <span>FCFA</span>
+                    </div>
 
                     {/* Raccourci WhatsApp rapide */}
                     <a
-                        href="https://wa.me/22890000000?text=Bonjour%20Nova%20Togo%20!"
+                        href="https://wa.me/22890000000?text=Bonjour%20Nova%20!"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Contacter sur WhatsApp"
